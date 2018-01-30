@@ -1,8 +1,13 @@
 /*
-   Example for DStemp library on Arduino Nano (c) Tomat7, Jan 2018
-   Method check() returns NOTHING!
-   only check for temperature from OneWire sensor
-
+   Example for DStemp library on Arduino Nano with ONE sensor (c) Tomat7, Jan 2018
+  
+   Method check() returns NOTHING but does everything:
+   основной метод, делает всё:
+   - проверяет наличие датчика / check for sensor
+   - инициализирует его при необходимости / reinit sensor if necessary
+   - командует датчику начать преобразование температуры / start conversation
+   - получает результат от датчика / collect results
+   
    Temp return current temperature OR:
    -99  sensor not found
    -83  sensor was found but conversation not finished within defined timeout
